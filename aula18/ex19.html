@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        label{
+            display: block;
+
+        }
+        input {
+            display: block;
+
+        }
+        input[type=submit],label{
+            margin-top: 10px;
+
+        }
+    </style>
+</head>
+<body>
+    <form name="curso1" id="curso1" action="#" method="post">
+        <label>Nome</label>
+        <input type="text" nome = "fnome" id="teste" value="Primeiro">
+        <label>Senha</label>
+        <input type="password" name="fsenha" value="123">
+        <input type="submit" name="btenviar" value="enviar">
+    </form>
+    <form name="curso2" id="curso2" action="#" method="post">
+            <label>Nome</label>
+            <input type="text" nome = "fnome" id="teste" value="Segundo">
+            <label>Senha</label>
+            <input type="password" name="fsenha" value="123">
+            <input type="submit" name="btenviar" value="enviar">
+    </form>
+
+    <hr>
+
+    <script>
+         document.write(document.getElementById("curso1").elements[0].value)
+        //var fm=document.forms[0].id;
+        //var fm=document.forms.item(0).id;
+        //var fm = document.forms.namedItem("curso1")
+        //var fm = document.forms["curso1"].elements[2].value
+        var fm = document.forms[0]
+        var el = fm.elements
+        for (var i=0; i<el.length-1; i++){
+        el[i].style.backgroundColor = "green"
+        el[i].value = "Ola"
+       
+        }
+       
+       
+    </script>
+    
+</body>
+
+</html>
