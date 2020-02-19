@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        #dv1{
+            width: 200px;
+            height: 200px;
+            border: 1px solid red;
+        }
+    </style>
+</head>
+<body onload="ola()">
+    
+    <div id="dv1" onmouseover="mudaCor(this,'red')" onmouseout="mudaCor(this,'green')"></div>
+</br>
+    <button onmouseover="mudaPos(this)">Clique AQUI!!!!</button>
+    <script>
+        function mudaCor(obj,cor){
+            obj.style.backgroundColor = cor
+        }
+        function mudaPos(obj){
+            obj.style.position="absolute"
+            obj.style.left=Math.random()*500+"px"
+            obj.style.top=Math.random()*500+"px"
+        }
+        
+    </script>
+</body>
+</html>

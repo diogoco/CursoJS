@@ -22,7 +22,17 @@
 </head>
 <body>
     <script>
-        document.write(Date())
+        var dt = new Date()
+        var dia = dt.getDay()
+        var mes = dt.getMonth()
+        var ano = dt.getFullYear()
+   
+        document.write(dia," de " +mes+ " de " + ano + "<br>")
+      
+        var valor = 100
+        var mt = Math.round(Math.random()*valor)
+        document.write(mt)
+
     </script>
        
        

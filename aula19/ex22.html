@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        #dv1{
+            width: 300px;
+            height: 300px;
+            border: 1px solid red;
+            background-color: red;
+            position: absolute;
+            left: 0px;
+            top: 0px; 
+        }
+    </style>
+</head>
+<body >
+    
+    <div id="dv1" onclick="msg()"</div>
+    </br>
+    
+    <script>
+        function msg(obj, cor){
+            var f = document.getElementById("dv1")
+            f.style.left = 500+"px"
+            f.style.top = 500+"px"
+            f.style.color = cor
+        }
+        function move(){
+            var obj = document.getElementById("dv1")
+            var tecla = event.keyCode
+            //37 - esquerda 38- cima 39-direita 40- baixo 13 - enter
+            if(tecla==37){
+                px-=10
+                obj.style.left = px+"px"
+
+            } else if(tecla==38){
+                py-=10
+                obj.style.top = py+"px"
+                
+            } else if(tecla==39){
+                px+=10
+                obj.style.left = px+"px"
+                
+            }  else if (tecla==40){
+                py+=10
+                obj.style.top = py+"px"
+                
+            }else if (tecla==13){
+                alert("evento removido");
+                this.removeEventListener("keydown", move)
+            }
+
+        }
+        
+        var obj = document.getElementById("dv1")
+        obj.addEventListener("click", function(event){
+            cor(obj,"#f00")
+
+        })
+           var px = 0
+           var py = 0
+        document.addEventListener("keydown", move)
+            
+        
+            
+        
+        
+        
+    </script>
+</body>
+</html>
